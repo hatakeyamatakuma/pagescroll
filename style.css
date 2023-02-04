@@ -1,2 +1,46 @@
 @charset "utf-8";
 /* 使用PC MAC */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+h1, h2{
+  margin: 30px;
+  text-align: center;
+}
+
+
+.nav-list {
+  background-color: blue;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+#main {
+  margin-top: 100px;
+}
+
+#main img, footer img{
+  width: 100vw;
+}
+
+section, footer {
+  margin-top: 100px;
+}
