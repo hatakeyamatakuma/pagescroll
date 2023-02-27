@@ -1,18 +1,23 @@
 $(function(){
+  const speed = 400;
   // #で始まるアンカーをクリックした場合に処理
-  $('#header a[href^="#"]').click(function(){
-    // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
+  $('#header a[href^="#"]').on("click",function(){
     const adjust = 0;
-    // スクロールの速度
-    const speed = 400; // ミリ秒
     // アンカーの値取得
     let href= $(this).attr("href");
     // 移動先を取得
     let target = $(href == "#" || href == "" ? 'html' : href);
     // 移動先を調整
     let position = target.offset().top + adjust;
-    // スムーススクロール
+    // スクロールの処理
     $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+  });
+  //topへをクリックした場合に処理
+  $(".footer__top").on("click",function(){
+    $("body,html").animate(
+      // 上から0pxの位置に戻る
+      {scrollTop: 0,},speed);
     return false;
   });
 });

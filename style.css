@@ -44,3 +44,11 @@ h1, h2{
 section, footer {
   margin-top: 100px;
 }
+
+.footer__top {
+  font-size: 2rem;
+  display: flex;
+  justify-content: right;
+  margin: 50px 0;
+  padding-right: 50px;
+}
