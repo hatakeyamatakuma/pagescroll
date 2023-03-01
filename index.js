@@ -4,11 +4,11 @@ $(function(){
   $('#header a[href^="#"]').on("click",function(){
     const adjust = 0;
     // アンカーの値取得
-    let href= $(this).attr("href");
+    const href= $(this).attr("href");
     // 移動先を取得
-    let target = $(href == "#" || href == "" ? 'html' : href);
+    const target = $(href === "#" || href === "" ? 'html' : href);
     // 移動先を調整
-    let position = target.offset().top + adjust;
+    const position = target.offset().top + adjust;
     // スクロールの処理
     $('body,html').animate({scrollTop:position}, speed, 'swing');
     return false;
